@@ -3,7 +3,7 @@ import { BusinessModelCanvas } from 'business-model-canvas'
 import 'business-model-canvas/dist/index.css'
 
 const App = () => {
-  return <BusinessModelCanvas text="Create React Library Example 😄" />
+  return <BusinessModelCanvas postits={[]} />
 }
 
 export default App

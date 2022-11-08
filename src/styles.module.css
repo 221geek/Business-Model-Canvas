@@ -1,9 +1,71 @@
-/* add css module styles here (optional) */
+.container {
+  margin: 30px;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.bmc {
+  display: grid;
+  border: 1px solid red;
+  grid: repeat(3, 200px) / repeat(10, 1fr);
+}
+
+.bmc,
+.bmc > div {
+  border: none;
+  border-radius: 5px;
+}
+
+.bmc > div {
+  display: grid;
+  position: relative;
+  gap: 10px;
+  grid-template-rows: 30px;
+  grid-auto-rows: 65px;
+  padding: 8px;
+}
+
+.bmc > div:nth-child(8),
+.bmc > div:nth-child(9) {
+  grid: 30px / repeat(5, 1fr);
+}
+.bmc > div:nth-child(8) h3,
+.bmc > div:nth-child(9) h3 {
+  grid-column: 1 / -1;
+}
+
+
+.bmc > div:nth-child(8) .note,
+.bmc > div:nth-child(9) .note {
+  grid-column: span 2;
+}
+
+.bmc h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+.bmc > div:nth-child(1),
+.bmc > div:nth-child(4),
+.bmc > div:nth-child(7) {
+  grid-area: span 2 / span 2;
+}
+
+.bmc > div:nth-child(2),
+.bmc > div:nth-child(5) {
+  grid-column: span 2;
+}
+
+.bmc > div:nth-child(3) {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.bmc > div:nth-child(6) {
+  grid-column: 7 / span 2;
+  grid-row: 2;
+}
+
+.bmc > div:nth-child(8),
+.bmc > div:nth-child(9) {
+  grid-area: -2 / span 5;
 }
